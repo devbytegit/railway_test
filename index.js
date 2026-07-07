@@ -1,7 +1,6 @@
-const http = require('http');
+import http from 'http';
 
 const server = http.createServer((req, res) => {
-  // It will read from Railway's environment variables later!
   const message = process.env.MY_MESSAGE || "Hello, this is the default Production app!";
   res.end(message);
 });
